@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 指明当前xml对应的Mapper -->
+<mapper namespace="com.smartbi.app.log.dao.PDao">
+
+    <insert id="insert" parameterType="com.smartbi.app.log.entity.P">
+        insert into p(picture,id) values(#{picture,typeHandler=org.apache.ibatis.type.BlobTypeHandler},#{id})
+    </insert>
+
+    <select id="get" parameterType="int" resultType="com.smartbi.app.log.entity.P">
+        select * from p where id = #{id}
+    </select>
+</mapper>

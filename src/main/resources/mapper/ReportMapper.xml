@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 指明当前xml对应的Mapper -->
+<mapper namespace="com.smartbi.app.log.dao.ReportDao">
+
+    <select id="getReportByClassNameAndName" resultType="com.smartbi.app.log.entity.Report">
+        select * from 20190712_143038 where classname =  #{classname} and name = #{name};
+    </select>
+
+</mapper>
